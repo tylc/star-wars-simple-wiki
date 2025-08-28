@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		C0F96C8B2E6078EA00DBC146 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = C0F96C8A2E6078EA00DBC146 /* Swinject */; };
+		C0F96C8E2E60791700DBC146 /* OHHTTPStubs in Frameworks */ = {isa = PBXBuildFile; productRef = C0F96C8D2E60791700DBC146 /* OHHTTPStubs */; };
+		C0F96C902E60791700DBC146 /* OHHTTPStubsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C0F96C8F2E60791700DBC146 /* OHHTTPStubsSwift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		C0F96C6D2E6076DA00DBC146 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +58,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0F96C8B2E6078EA00DBC146 /* Swinject in Frameworks */,
+				C0F96C902E60791700DBC146 /* OHHTTPStubsSwift in Frameworks */,
+				C0F96C8E2E60791700DBC146 /* OHHTTPStubs in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +111,7 @@
 				C0F96C5B2E6076D900DBC146 /* Sources */,
 				C0F96C5C2E6076D900DBC146 /* Frameworks */,
 				C0F96C5D2E6076D900DBC146 /* Resources */,
+				C03CD0492E60798000E32C7F /* Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -112,6 +122,9 @@
 			);
 			name = "star-wars-simple-wiki";
 			packageProductDependencies = (
+				C0F96C8A2E6078EA00DBC146 /* Swinject */,
+				C0F96C8D2E60791700DBC146 /* OHHTTPStubs */,
+				C0F96C8F2E60791700DBC146 /* OHHTTPStubsSwift */,
 			);
 			productName = "star-wars-simple-wiki";
 			productReference = C0F96C5F2E6076D900DBC146 /* star-wars-simple-wiki.app */;
@@ -195,6 +208,11 @@
 			);
 			mainGroup = C0F96C562E6076D900DBC146;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				C0F96C892E6078EA00DBC146 /* XCRemoteSwiftPackageReference "Swinject" */,
+				C0F96C8C2E60791700DBC146 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */,
+				C0F96C912E60793000DBC146 /* XCRemoteSwiftPackageReference "Reachability" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = C0F96C602E6076D900DBC146 /* Products */;
 			projectDirPath = "";
@@ -230,6 +248,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C03CD0492E60798000E32C7F /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin:/usr/local/bin\"\n\nif which swiftlint >/dev/null; then\n  # Add .swiftlint.yml for custom rules\n  swiftlint || true\nelse\n  echo \"warning: SwiftLint no està instal·lat. Instala'l amb 'brew install swiftlint'.\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C0F96C5B2E6076D900DBC146 /* Sources */ = {
@@ -558,6 +598,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C0F96C892E6078EA00DBC146 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.9.1;
+			};
+		};
+		C0F96C8C2E60791700DBC146 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AliSoftware/OHHTTPStubs";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.1.0;
+			};
+		};
+		C0F96C912E60793000DBC146 /* XCRemoteSwiftPackageReference "Reachability" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ashleymills/Reachability.swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C0F96C8A2E6078EA00DBC146 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C0F96C892E6078EA00DBC146 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+		C0F96C8D2E60791700DBC146 /* OHHTTPStubs */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C0F96C8C2E60791700DBC146 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */;
+			productName = OHHTTPStubs;
+		};
+		C0F96C8F2E60791700DBC146 /* OHHTTPStubsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C0F96C8C2E60791700DBC146 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */;
+			productName = OHHTTPStubsSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C0F96C572E6076D900DBC146 /* Project object */;
 }
