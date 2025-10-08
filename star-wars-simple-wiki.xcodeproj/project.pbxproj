@@ -6,6 +6,17 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		C0A2FD592E96C19C00A61B15 /* CoreDomain in Frameworks */ = {isa = PBXBuildFile; productRef = C0A2FD582E96C19C00A61B15 /* CoreDomain */; };
+		C0A2FD5C2E96C1AA00A61B15 /* CoreData in Frameworks */ = {isa = PBXBuildFile; productRef = C0A2FD5B2E96C1AA00A61B15 /* CoreData */; };
+		C0A2FD5F2E96C1BF00A61B15 /* CoreModel in Frameworks */ = {isa = PBXBuildFile; productRef = C0A2FD5E2E96C1BF00A61B15 /* CoreModel */; };
+		C0A2FD622E96C1D100A61B15 /* CoreUI in Frameworks */ = {isa = PBXBuildFile; productRef = C0A2FD612E96C1D100A61B15 /* CoreUI */; };
+		C0B2D6BA2E96C0C6007E7D26 /* CoreUI in Frameworks */ = {isa = PBXBuildFile; productRef = C0B2D6B92E96C0C6007E7D26 /* CoreUI */; };
+		C0F96C8B2E6078EA00DBC146 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = C0F96C8A2E6078EA00DBC146 /* Swinject */; };
+		C0F96C8E2E60791700DBC146 /* OHHTTPStubs in Frameworks */ = {isa = PBXBuildFile; productRef = C0F96C8D2E60791700DBC146 /* OHHTTPStubs */; };
+		C0F96C902E60791700DBC146 /* OHHTTPStubsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C0F96C8F2E60791700DBC146 /* OHHTTPStubsSwift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		C0F96C6D2E6076DA00DBC146 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +63,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0F96C8B2E6078EA00DBC146 /* Swinject in Frameworks */,
+				C0A2FD5C2E96C1AA00A61B15 /* CoreData in Frameworks */,
+				C0B2D6BA2E96C0C6007E7D26 /* CoreUI in Frameworks */,
+				C0A2FD5F2E96C1BF00A61B15 /* CoreModel in Frameworks */,
+				C0F96C902E60791700DBC146 /* OHHTTPStubsSwift in Frameworks */,
+				C0A2FD622E96C1D100A61B15 /* CoreUI in Frameworks */,
+				C0A2FD592E96C19C00A61B15 /* CoreDomain in Frameworks */,
+				C0F96C8E2E60791700DBC146 /* OHHTTPStubs in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +91,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C0DE773D2E96C06600D62274 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C0F96C562E6076D900DBC146 = {
 			isa = PBXGroup;
 			children = (
 				C0F96C612E6076D900DBC146 /* star-wars-simple-wiki */,
 				C0F96C6F2E6076DA00DBC146 /* star-wars-simple-wikiTests */,
 				C0F96C792E6076DA00DBC146 /* star-wars-simple-wikiUITests */,
+				C0DE773D2E96C06600D62274 /* Frameworks */,
 				C0F96C602E6076D900DBC146 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -102,6 +129,7 @@
 				C0F96C5B2E6076D900DBC146 /* Sources */,
 				C0F96C5C2E6076D900DBC146 /* Frameworks */,
 				C0F96C5D2E6076D900DBC146 /* Resources */,
+				C03CD0492E60798000E32C7F /* Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -112,6 +140,14 @@
 			);
 			name = "star-wars-simple-wiki";
 			packageProductDependencies = (
+				C0F96C8A2E6078EA00DBC146 /* Swinject */,
+				C0F96C8D2E60791700DBC146 /* OHHTTPStubs */,
+				C0F96C8F2E60791700DBC146 /* OHHTTPStubsSwift */,
+				C0B2D6B92E96C0C6007E7D26 /* CoreUI */,
+				C0A2FD582E96C19C00A61B15 /* CoreDomain */,
+				C0A2FD5B2E96C1AA00A61B15 /* CoreData */,
+				C0A2FD5E2E96C1BF00A61B15 /* CoreModel */,
+				C0A2FD612E96C1D100A61B15 /* CoreUI */,
 			);
 			productName = "star-wars-simple-wiki";
 			productReference = C0F96C5F2E6076D900DBC146 /* star-wars-simple-wiki.app */;
@@ -171,7 +207,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1640;
-				LastUpgradeCheck = 1640;
+				LastUpgradeCheck = 2600;
 				TargetAttributes = {
 					C0F96C5E2E6076D900DBC146 = {
 						CreatedOnToolsVersion = 16.4;
@@ -195,6 +231,15 @@
 			);
 			mainGroup = C0F96C562E6076D900DBC146;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				C0F96C892E6078EA00DBC146 /* XCRemoteSwiftPackageReference "Swinject" */,
+				C0F96C8C2E60791700DBC146 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */,
+				C0F96C912E60793000DBC146 /* XCRemoteSwiftPackageReference "Reachability" */,
+				C0A2FD572E96C19C00A61B15 /* XCLocalSwiftPackageReference "Packages/CoreDomain" */,
+				C0A2FD5A2E96C1AA00A61B15 /* XCLocalSwiftPackageReference "Packages/CoreData" */,
+				C0A2FD5D2E96C1BF00A61B15 /* XCLocalSwiftPackageReference "Packages/CoreModel" */,
+				C0A2FD602E96C1D100A61B15 /* XCLocalSwiftPackageReference "Packages/CoreUI" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = C0F96C602E6076D900DBC146 /* Products */;
 			projectDirPath = "";
@@ -230,6 +275,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C03CD0492E60798000E32C7F /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin:/usr/local/bin\"\n\nif which swiftlint >/dev/null; then\n  # Add .swiftlint.yml for custom rules\n  swiftlint || true\nelse\n  echo \"warning: SwiftLint no està instal·lat. Instala'l amb 'brew install swiftlint'.\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C0F96C5B2E6076D900DBC146 /* Sources */ = {
@@ -328,6 +395,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -385,6 +453,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -558,6 +627,90 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		C0A2FD572E96C19C00A61B15 /* XCLocalSwiftPackageReference "Packages/CoreDomain" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/CoreDomain;
+		};
+		C0A2FD5A2E96C1AA00A61B15 /* XCLocalSwiftPackageReference "Packages/CoreData" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/CoreData;
+		};
+		C0A2FD5D2E96C1BF00A61B15 /* XCLocalSwiftPackageReference "Packages/CoreModel" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/CoreModel;
+		};
+		C0A2FD602E96C1D100A61B15 /* XCLocalSwiftPackageReference "Packages/CoreUI" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/CoreUI;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C0F96C892E6078EA00DBC146 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.9.1;
+			};
+		};
+		C0F96C8C2E60791700DBC146 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AliSoftware/OHHTTPStubs";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.1.0;
+			};
+		};
+		C0F96C912E60793000DBC146 /* XCRemoteSwiftPackageReference "Reachability" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ashleymills/Reachability.swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C0A2FD582E96C19C00A61B15 /* CoreDomain */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CoreDomain;
+		};
+		C0A2FD5B2E96C1AA00A61B15 /* CoreData */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CoreData;
+		};
+		C0A2FD5E2E96C1BF00A61B15 /* CoreModel */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CoreModel;
+		};
+		C0A2FD612E96C1D100A61B15 /* CoreUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CoreUI;
+		};
+		C0B2D6B92E96C0C6007E7D26 /* CoreUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CoreUI;
+		};
+		C0F96C8A2E6078EA00DBC146 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C0F96C892E6078EA00DBC146 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+		C0F96C8D2E60791700DBC146 /* OHHTTPStubs */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C0F96C8C2E60791700DBC146 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */;
+			productName = OHHTTPStubs;
+		};
+		C0F96C8F2E60791700DBC146 /* OHHTTPStubsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C0F96C8C2E60791700DBC146 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */;
+			productName = OHHTTPStubsSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C0F96C572E6076D900DBC146 /* Project object */;
 }
