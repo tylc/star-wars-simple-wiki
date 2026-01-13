@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MonsterSize: Codable, Equatable {
+public struct MonsterSize: Codable, Equatable {
     public let base: Float
     public let mini: Float
     public let silver: Float

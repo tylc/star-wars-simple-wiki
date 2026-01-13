@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MonsterWeakness: Codable, Equatable, Identifiable {
+public struct MonsterWeakness: Codable, Equatable, Identifiable {
     public let id: Int
     public let level: Int
     public let condition: String?

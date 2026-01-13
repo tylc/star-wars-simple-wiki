@@ -6,7 +6,7 @@
 //
 import Foundation
 
-struct GameLocation: Codable, Equatable {
+public struct GameLocation: Codable, Equatable {
     public let regionName: String
     public let areaName: String?
     public let notes: String?

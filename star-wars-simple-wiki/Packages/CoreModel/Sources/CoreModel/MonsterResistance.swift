@@ -7,7 +7,7 @@
 
 import Foundation
 
-
+#warning("creeate a generic resistance/weakness and use it")
 public struct MonsterResistance: Codable, Equatable, Identifiable {
     public let id: Int
     public let condition: String?

@@ -6,13 +6,13 @@
 //
 import Foundation
 
-struct MonsterReward: Codable, Equatable {
+public struct MonsterReward: Codable, Equatable {
     #warning("struct item pending")
     public let item: String
     public let conditions: [RewardCondition]
 }
 
-struct RewardCondition: Codable, Equatable {
+public struct RewardCondition: Codable, Equatable {
     public let kind: RewardConditionKind
     public let rank: Rank
     public let quantity: Int
@@ -20,13 +20,13 @@ struct RewardCondition: Codable, Equatable {
     public let part: Int?
 }
 
-enum Rank: String, Codable {
+public enum Rank: String, Codable {
     case low
     case high
     case master
 }
 
-enum RewardConditionKind: String, Codable {
+public enum RewardConditionKind: String, Codable {
     case carve
     case carveSevered = "carve-severed"
     case endemicCapture = "endemic-capture"

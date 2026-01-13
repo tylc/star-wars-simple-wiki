@@ -5,6 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "CoreData",
+    platforms: [.iOS(.v15)],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
@@ -13,13 +14,18 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(path: "../CoreModel")
+        .package(path: "../CoreModel"),
+        .package(url: "https://github.com/Alamofire/Alamofire.git", from: "5.6.0")
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
             name: "CoreData",
+            dependencies: [
+                .product(name: "CoreModel", package: "CoreModel"),
+                .product(name: "Alamofire", package: "Alamofire")
+            ]
         ),
         .testTarget(
             name: "CoreDataTests",

@@ -6,7 +6,7 @@
 //
 import Foundation
 
-struct Monster: Codable, Identifiable, Equatable {
+public struct Monster: Codable, Identifiable, Equatable {
     public let id: Int
     public let gameId: Int
     public let kind: MonsterKind
@@ -25,12 +25,12 @@ struct Monster: Codable, Identifiable, Equatable {
 }
 
 // MARK: - Enums for categories
-enum MonsterKind: String, Codable {
+public enum MonsterKind: String, Codable {
     case large
     case small
 }
 
-enum Species: String, Codable, CaseIterable {
+public enum Species: String, Codable, CaseIterable {
     case flyingWyvern = "flying-wyvern"
     case fish = "fish"
     case herbivore = "herbivore"
