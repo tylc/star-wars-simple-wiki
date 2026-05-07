@@ -1,6 +1,5 @@
-import Testing
 @testable import CoreModel
 
-@Test func example() async throws {
-    // Write your test here and use APIs like `#expect(...)` to check expected conditions.
+func coreModelFixtureTypesCompile() {
+    _ = MHWNamedResource(id: 1, name: "Rathalos")
 }
