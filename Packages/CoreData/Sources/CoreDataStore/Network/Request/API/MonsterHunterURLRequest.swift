@@ -1,11 +1,11 @@
 import Foundation
 import Alamofire
 
-public enum MonsterHunterAPIRequestError: Error, Equatable, Sendable {
+public enum MonsterHunterURLRequestError: Error, Equatable, Sendable {
     case invalidURL
 }
 
-public struct MonsterHunterAPIRequest: APIRequest {
+public struct MonsterHunterURLRequest: APIRequest {
     private let rootURL: URL
     private let request: MonsterHunterRequest
 
@@ -33,9 +33,6 @@ public struct MonsterHunterAPIRequest: APIRequest {
         var items: [URLQueryItem] = []
         if let query = request.query {
             items.append(URLQueryItem(name: "q", value: query))
-        }
-        if let projection = request.projection {
-            items.append(URLQueryItem(name: "p", value: projection))
         }
         return items
     }
