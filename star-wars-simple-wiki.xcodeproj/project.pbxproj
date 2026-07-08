@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C06E6E312F169FF900F256E4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C06E6E302F169FF900F256E4 /* Alamofire */; };
 		C0A2FD592E96C19C00A61B15 /* CoreDomain in Frameworks */ = {isa = PBXBuildFile; productRef = C0A2FD582E96C19C00A61B15 /* CoreDomain */; };
 		C0A2FD5C2E96C1AA00A61B15 /* CoreData in Frameworks */ = {isa = PBXBuildFile; productRef = C0A2FD5B2E96C1AA00A61B15 /* CoreData */; };
 		C0A2FD5F2E96C1BF00A61B15 /* CoreModel in Frameworks */ = {isa = PBXBuildFile; productRef = C0A2FD5E2E96C1BF00A61B15 /* CoreModel */; };
@@ -63,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C06E6E312F169FF900F256E4 /* Alamofire in Frameworks */,
 				C0F96C8B2E6078EA00DBC146 /* Swinject in Frameworks */,
 				C0A2FD5C2E96C1AA00A61B15 /* CoreData in Frameworks */,
 				C0B2D6BA2E96C0C6007E7D26 /* CoreUI in Frameworks */,
@@ -148,6 +150,7 @@
 				C0A2FD5B2E96C1AA00A61B15 /* CoreData */,
 				C0A2FD5E2E96C1BF00A61B15 /* CoreModel */,
 				C0A2FD612E96C1D100A61B15 /* CoreUI */,
+				C06E6E302F169FF900F256E4 /* Alamofire */,
 			);
 			productName = "star-wars-simple-wiki";
 			productReference = C0F96C5F2E6076D900DBC146 /* star-wars-simple-wiki.app */;
@@ -239,6 +242,7 @@
 				C0A2FD5A2E96C1AA00A61B15 /* XCLocalSwiftPackageReference "Packages/CoreData" */,
 				C0A2FD5D2E96C1BF00A61B15 /* XCLocalSwiftPackageReference "Packages/CoreModel" */,
 				C0A2FD602E96C1D100A61B15 /* XCLocalSwiftPackageReference "Packages/CoreUI" */,
+				C06E6E2F2F169FF900F256E4 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = C0F96C602E6076D900DBC146 /* Products */;
@@ -648,6 +652,14 @@
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		C06E6E2F2F169FF900F256E4 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.11.0;
+			};
+		};
 		C0F96C892E6078EA00DBC146 /* XCRemoteSwiftPackageReference "Swinject" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Swinject/Swinject";
@@ -675,6 +687,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		C06E6E302F169FF900F256E4 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C06E6E2F2F169FF900F256E4 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
 		C0A2FD582E96C19C00A61B15 /* CoreDomain */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = CoreDomain;
