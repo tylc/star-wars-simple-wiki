@@ -6,7 +6,7 @@ public enum ParameterEncodingType: Sendable {
     case body
 }
 
-public protocol BaseRouter: URLRequestConvertible, Sendable {
+public protocol APIRequest: URLRequestConvertible, Sendable {
     var method: HTTPMethod { get }
     var path: String { get }
     var queryItems: [URLQueryItem] { get }
@@ -16,7 +16,7 @@ public protocol BaseRouter: URLRequestConvertible, Sendable {
     var parameterEncoding: ParameterEncodingType { get }
 }
 
-public extension BaseRouter {
+public extension APIRequest {
     var method: HTTPMethod { .get }
     var queryItems: [URLQueryItem] { [] }
     var headers: HTTPHeaders { [:] }

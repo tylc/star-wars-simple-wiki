@@ -1,7 +1,7 @@
 import Alamofire
 import Foundation
 
-open class BaseClient: @unchecked Sendable {
+open class BaseHTTPClient: @unchecked Sendable {
     private let session: Session
     private let decoder: DataDecoder
 
@@ -14,10 +14,10 @@ open class BaseClient: @unchecked Sendable {
     }
 
     public func perform<Value: Decodable & Sendable>(
-        route: any BaseRouter,
+        request: any APIRequest,
         as type: Value.Type
     ) async throws -> Value {
-        try await session.request(route)
+        try await session.request(request)
             .validate(statusCode: 200..<300)
             .serializingDecodable(Value.self, decoder: decoder)
             .value

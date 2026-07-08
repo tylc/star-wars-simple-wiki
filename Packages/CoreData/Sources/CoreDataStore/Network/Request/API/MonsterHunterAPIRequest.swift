@@ -1,11 +1,11 @@
 import Foundation
 import Alamofire
 
-public enum MonsterHunterRouterError: Error, Equatable, Sendable {
+public enum MonsterHunterAPIRequestError: Error, Equatable, Sendable {
     case invalidURL
 }
 
-public struct MonsterHunterRouter: BaseRouter {
+public struct MonsterHunterAPIRequest: APIRequest {
     private let rootURL: URL
     private let request: MonsterHunterRequest
 
