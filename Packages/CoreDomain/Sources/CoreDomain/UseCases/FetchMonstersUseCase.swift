@@ -1,7 +1,7 @@
 import CoreModel
 
 public protocol FetchMonstersUseCaseProtocol: Sendable {
-    func execute(query: String?, projection: String?) async throws -> [MHWMonster]
+    func execute(query: String?) async throws -> [MHWMonster]
 }
 
 public final class FetchMonstersUseCase: FetchMonstersUseCaseProtocol, @unchecked Sendable {
@@ -11,7 +11,7 @@ public final class FetchMonstersUseCase: FetchMonstersUseCaseProtocol, @unchecke
         self.repository = repository
     }
 
-    public func execute(query: String? = nil, projection: String? = nil) async throws -> [MHWMonster] {
-        try await repository.fetchMonsters(query: query, projection: projection)
+    public func execute(query: String? = nil) async throws -> [MHWMonster] {
+        try await repository.fetchMonsters(query: query)
     }
 }

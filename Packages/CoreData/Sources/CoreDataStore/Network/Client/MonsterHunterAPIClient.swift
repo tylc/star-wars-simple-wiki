@@ -1,11 +1,11 @@
 import Alamofire
 
-public protocol MonsterHunterAPIClientProtocol: Sendable {
-    func fetch<Value: Decodable & Sendable>(_ request: MonsterHunterRequest, as type: Value.Type) async throws -> Value
+public protocol MonsterHunterClientProtocol: Sendable {
+    func fetch<Value: Decodable & Sendable>(_ request: MonsterHunterRequest) async throws -> Value
 }
 
-public final class MonsterHunterAPIClient: BaseHTTPClient, MonsterHunterAPIClientProtocol, @unchecked Sendable {
-    public func fetch<Value: Decodable & Sendable>(_ request: MonsterHunterRequest, as type: Value.Type) async throws -> Value {
-        try await perform(request: MonsterHunterAPIRequest(request: request), as: type)
+public final class MonsterHunterAPIClient: BaseHTTPClient, MonsterHunterClientProtocol, @unchecked Sendable {
+    public func fetch<Value: Decodable & Sendable>(_ request: MonsterHunterRequest) async throws -> Value {
+        try await perform(request: MonsterHunterURLRequest(request: request))
     }
 }

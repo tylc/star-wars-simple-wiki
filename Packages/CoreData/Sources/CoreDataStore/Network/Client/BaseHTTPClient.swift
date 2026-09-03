@@ -14,8 +14,7 @@ open class BaseHTTPClient: @unchecked Sendable {
     }
 
     public func perform<Value: Decodable & Sendable>(
-        request: any APIRequest,
-        as type: Value.Type
+        request: any APIRequest
     ) async throws -> Value {
         try await session.request(request)
             .validate(statusCode: 200..<300)
