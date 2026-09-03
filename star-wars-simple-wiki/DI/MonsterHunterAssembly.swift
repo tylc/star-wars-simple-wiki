@@ -15,5 +15,11 @@ final class MonsterHunterAssembly: Assembly {
             )
         }
         .inObjectScope(.container)
+
+        container.register(FetchMonstersUseCaseProtocol.self) { resolver in
+            FetchMonstersUseCase(
+                repository: resolver.resolve(MonsterHunterRepositoryProtocol.self)!
+            )
+        }
     }
 }

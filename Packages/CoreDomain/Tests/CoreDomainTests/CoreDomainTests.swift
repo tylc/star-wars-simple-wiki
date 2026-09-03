@@ -1,5 +1,5 @@
 @testable import CoreDomain
 
 func coreDomainFixtureTypesCompile(repository: any MonsterHunterRepositoryProtocol) {
-    _ = repository
+    _ = FetchMonstersUseCase(repository: repository)
 }
